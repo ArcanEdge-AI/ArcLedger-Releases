@@ -13,8 +13,8 @@ Each release has:
 In PowerShell, from the folder you downloaded to:
 
 ```powershell
-Get-FileHash .\ArcLedger.Setup.0.1.0.exe -Algorithm SHA256
-Get-AuthenticodeSignature .\ArcLedger.Setup.0.1.0.exe | Select-Object Status, @{n='Signer';e={$_.SignerCertificate.Subject}}
+Get-FileHash .\ArcLedger.Setup.0.1.1.exe -Algorithm SHA256
+Get-AuthenticodeSignature .\ArcLedger.Setup.0.1.1.exe | Select-Object Status, @{n='Signer';e={$_.SignerCertificate.Subject}}
 ```
 
 The hash must match the installer's line in that release's `SHA256SUMS.txt`. The signature must say `Valid`, with the
